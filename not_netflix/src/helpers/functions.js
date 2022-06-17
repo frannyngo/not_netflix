@@ -5,7 +5,7 @@ async function search(movieTitle) {
   if (typeof movieTitle !== "string") throw "Not a string";
   try {
     const response = await axios
-      .post(`${BASE_URL}/?apikey=${API_KEY}&t=${movieTitle}&type=movie`)
+      .post(`${BASE_URL}/?apikey=${API_KEY}&s=${movieTitle}&type=movie`)
       .then((response) => {
         return response.data;
       })

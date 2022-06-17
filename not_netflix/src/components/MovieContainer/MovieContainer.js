@@ -1,13 +1,14 @@
 import React from "react";
-import { Section } from "../../global/Styles";
 import { Container } from "./MovieContainerStyles";
+import { Button } from "../../global/Styles";
 
 export default function MovieContainer(data) {
   return (
     <Container>
-      <p>{data.movie.poster}</p>
-      <p>{data.movie.title}</p>
-      <p>{data.movie.year}</p>
+      <p>{data.movie.Poster}</p>
+      <p>{data.movie.Title}</p>
+      <p>{data.movie.Year}</p>
+      <Button>More Info</Button>
     </Container>
   );
 }

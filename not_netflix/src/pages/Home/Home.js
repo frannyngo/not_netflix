@@ -5,26 +5,28 @@ import MovieContainer from "../../components/MovieContainer/MovieContainer";
 import { SearchContainer, Input } from "./HomeStyles";
 
 export default function Home() {
-  const [movie, setMovie] = useState({ title: "", poster: "", year: "" });
+  const [movie, setMovie] = useState();
 
   async function searchMovie(e) {
     e.preventDefault();
     const response = await search(e.target.search.value);
-    console.log(response);
-    setMovie({
-      title: response.Title,
-      poster: response.Poster,
-      year: response.Year,
-    });
+    console.log(response.Search);
+    setMovie(response.Search);
   }
 
+  console.log(movie);
+
   return (
-    <Section>
+    <Section flexDirection="column">
       <SearchContainer onSubmit={(e) => searchMovie(e)}>
         <Input type="text" placeholder="Search Movie" id="search" />
         <Button>Search</Button>
       </SearchContainer>
-      {movie.title !== "" && <MovieContainer movie={movie} />}
+      {movie &&
+        movie.map((m) => {
+          console.log(m);
+          return <MovieContainer movie={m} />;
+        })}
     </Section>
   );
 }

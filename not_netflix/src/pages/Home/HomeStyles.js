@@ -5,11 +5,12 @@ export const SearchContainer = styled.form`
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  margin-right: 30px;
 `;
 
 export const Input = styled.input`
   color: red;
-  width: 300px;
+  width: 200px;
   height: 25px;
   border: 1px solid red;
   background: transparent;
