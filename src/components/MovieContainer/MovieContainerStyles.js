@@ -1,4 +1,17 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const hover = keyframes`
+  from {
+    transform: scale(1);
+    --webkit-transform: scale(1);
+    -ms-transform: scale(1);  
+  }
+  to {
+    transform: scale(1.1);
+    --webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+  }
+`;
 
 export const Container = styled.div`
   display: flex;
@@ -14,6 +27,11 @@ export const Container = styled.div`
   padding-top: 5px;
   padding-top: 10px;
   border: 1px solid red;
+
+  &:hover {
+    animation: ${hover} 0.1s ease-in;
+    animation-fill-mode: forwards;
+  }
 `;
 
 export const TextContainer = styled.div`
