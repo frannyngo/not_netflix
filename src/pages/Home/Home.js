@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { search } from "../../helpers/functions";
-import { Section, Button } from "../../global/Styles";
+import { Section } from "../../global/Styles";
 import MovieContainer from "../../components/MovieContainer/MovieContainer";
 import {
   ButtonContainer,
@@ -9,7 +9,7 @@ import {
   MovieLibrary,
 } from "./HomeStyles";
 import Playlist from "../../components/Playlist/Playlist";
-import { POPULAR } from "../../helpers/constants";
+import { POPULAR, TRENDING } from "../../helpers/constants";
 import { PlaylistContainer } from "../../components/Playlist/PlaylistStyles";
 
 export default function Home() {
@@ -28,6 +28,8 @@ export default function Home() {
     e.preventDefault();
     setMovie();
   }
+
+  console.log(movie);
 
   return (
     <Section flexDirection="column" style={{ paddingTop: 200 }}>
@@ -51,7 +53,7 @@ export default function Home() {
       ) : (
         <PlaylistContainer>
           <Playlist title={`Popular on Not Netflix`} list={POPULAR} />
-          <Playlist title={`Trending Now`} list={POPULAR} />
+          <Playlist title={`Trending Now`} list={TRENDING} />
         </PlaylistContainer>
       )}
     </Section>
