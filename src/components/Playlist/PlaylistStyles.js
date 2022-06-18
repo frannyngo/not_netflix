@@ -30,6 +30,10 @@ export const PlaylistContainer = styled.div`
   align-items: center;
   width: 100%;
   flex-direction: column;
+
+  @media (max-width: 450px) {
+    width: 90%;
+  }
 `;
 
 export const Container = styled.div`

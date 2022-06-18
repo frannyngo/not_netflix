@@ -6,7 +6,6 @@ export const Theme = styled.div`
   flex-direction: column;
   background: black;
   width: 100vw;
-  height: 100%;
   position: absolute;
   left: 0;
   top: 0;
@@ -16,8 +15,8 @@ export const Section = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: ${(props) => props.flexDirection || "row"};
-  padding-top: 100px;
+  flex-direction: ${(props) => props.flexDirection || "column"};
+  padding-top: 200px;
   padding-bottom: 100px;
   background: ${(props) => props.background || "black"};
   width: 100%;

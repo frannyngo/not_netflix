@@ -5,7 +5,7 @@ import {
   TextContainer,
   Poster,
 } from "./MovieContainerStyles";
-import { Button } from "../../global/Styles";
+import { Button } from "../../global/theme";
 import Error from "../../assets/error.png";
 
 export default function MovieContainer(props) {

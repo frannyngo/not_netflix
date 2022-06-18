@@ -1,5 +1,5 @@
 import axios from "axios";
-import { BASE_URL, API_KEY } from "./constants.js";
+import { BASE_URL, API_KEY } from "./constants/constants.js";
 
 async function search(movieTitle) {
   if (typeof movieTitle !== "string") throw "Not a string";

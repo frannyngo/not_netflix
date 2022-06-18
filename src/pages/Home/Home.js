@@ -1,16 +1,22 @@
 import React, { useEffect, useState } from "react";
 import { search } from "../../helpers/functions";
-import { Section } from "../../global/Styles";
+import { Section } from "../../global/theme";
 import MovieContainer from "../../components/MovieContainer/MovieContainer";
 import {
   ButtonContainer,
   DeleteButton,
   Input,
-  MovieLibrary,
+  SearchLibrary,
 } from "./HomeStyles";
 import Playlist from "../../components/Playlist/Playlist";
-import { POPULAR, TRENDING } from "../../helpers/constants";
 import { PlaylistContainer } from "../../components/Playlist/PlaylistStyles";
+import {
+  TRENDING,
+  POPULAR,
+  COMEDY,
+  FAMILIAR,
+  FUTURE,
+} from "../../helpers/constants/playlist";
 
 export default function Home() {
   const [movie, setMovie] = useState();
@@ -32,7 +38,7 @@ export default function Home() {
   console.log(movie);
 
   return (
-    <Section flexDirection="column" style={{ paddingTop: 200 }}>
+    <Section flexDirection="column">
       <ButtonContainer>
         <Input
           type="text"
@@ -42,20 +48,29 @@ export default function Home() {
         />
         <DeleteButton onClick={(e) => clearSearch(e)}>X</DeleteButton>
       </ButtonContainer>
-
-      {movie ? (
-        <MovieLibrary>
+      {movie && (
+        <SearchLibrary>
           {movie &&
             movie.map((m, i) => {
               return <MovieContainer key={i} movie={m} />;
             })}
-        </MovieLibrary>
-      ) : (
-        <PlaylistContainer>
-          <Playlist title={`Popular on Not Netflix`} list={POPULAR} />
-          <Playlist title={`Trending Now`} list={TRENDING} />
-        </PlaylistContainer>
+        </SearchLibrary>
       )}
+      <PlaylistContainer>
+        <Playlist title={`Popular on Not Netflix`} list={POPULAR} />
+        <Playlist title={`Trending Now`} list={TRENDING} />
+        <Playlist title={`90-Minute Comedies`} list={COMEDY} />
+        <Playlist title={`Familiar Favourites`} list={FAMILIAR} />
+        <Playlist title={`Dystopian Futures`} list={FUTURE} />
+        {/* /////// */}
+        <Playlist title={`Popular on Not Netflix`} list={POPULAR} />
+        <Playlist title={`Trending Now`} list={TRENDING} />
+        <Playlist title={`90-Minute Comedies`} list={COMEDY} />
+        <Playlist title={`Familiar Favourites`} list={FAMILIAR} />
+        <Playlist title={`Dystopian Futures`} list={FUTURE} />
+        <Playlist title={`90-Minute Comedies`} list={COMEDY} />
+      </PlaylistContainer>
+      -
     </Section>
   );
 }

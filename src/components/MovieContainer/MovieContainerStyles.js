@@ -13,17 +13,6 @@ const hover = keyframes`
   }
 `;
 
-const fade = keyframes`
-  from {
-    opacity: 0;
-    transform: translate3d(100px, 0px, 0);
-  }
-  to {
-    opacity: ;
-    transform: translate3d(0px, 0px, 0);
-  }
-`;
-
 export const Container = styled.div`
   display: flex;
   justify-content: center;

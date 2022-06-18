@@ -23,13 +23,14 @@ export const Input = styled.input`
   }
 `;
 
-export const MovieLibrary = styled.div`
+export const SearchLibrary = styled.div`
   display: flex;
   margin-top: 20px;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
   width: 90%;
+  height: 100%;
 `;
 
 export const ButtonContainer = styled.div`
@@ -37,6 +38,7 @@ export const ButtonContainer = styled.div`
   align-items: center;
   justify-content: center;
   width: 100%;
+  margin-bottom: 30px;
 `;
 
 export const DeleteButton = styled.button`
