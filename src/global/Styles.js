@@ -6,7 +6,7 @@ export const Theme = styled.div`
   flex-direction: column;
   background: black;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   position: absolute;
   left: 0;
   top: 0;
@@ -21,7 +21,7 @@ export const Section = styled.section`
   padding-bottom: 100px;
   background: ${(props) => props.background || "black"};
   width: 100%;
-  max-width: 2000px;
+  max-width: 1600px;
 `;
 
 export const Button = styled.button`
@@ -38,5 +38,7 @@ export const Button = styled.button`
 
   &:hover {
     cursor: pointer;
+    background: red;
+    color: black;
   }
 `;

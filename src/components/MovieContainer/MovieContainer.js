@@ -6,14 +6,21 @@ import {
   Poster,
 } from "./MovieContainerStyles";
 import { Button } from "../../global/Styles";
+import Error from "../../assets/error.png";
 
-export default function MovieContainer(data) {
+export default function MovieContainer(props) {
   return (
     <Container>
-      <Poster src={data.movie.Poster} />
+      <Poster
+        src={props.movie.Poster}
+        onError={({ currentTarget }) => {
+          currentTarget.onerror = null;
+          currentTarget.src = Error;
+        }}
+      />
       <TextContainer>
-        <Header>{data.movie.Year}</Header>
-        <Header>{data.movie.Title}</Header>
+        <Header>{props.movie.Year}</Header>
+        <Header>{props.movie.Title}</Header>
         <Button>More Info</Button>
       </TextContainer>
     </Container>

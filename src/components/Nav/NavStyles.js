@@ -4,7 +4,7 @@ export const NavContainer = styled.div`
   display: flex;
   width: 100%;
   height: 100px;
-  max-width: 2000px;
+  max-width: 1600px;
   position: absolute;
   top: 0;
 `;

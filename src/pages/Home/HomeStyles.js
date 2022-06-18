@@ -14,7 +14,6 @@ export const Input = styled.input`
   height: 25px;
   border: 1px solid red;
   background: transparent;
-  margin-bottom: 20px;
   padding: 10px;
   border-radius: 10px;
 
@@ -31,4 +30,30 @@ export const MovieLibrary = styled.div`
   justify-content: center;
   flex-wrap: wrap;
   width: 90%;
+`;
+
+export const ButtonContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+`;
+
+export const DeleteButton = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  color: red;
+  border-radius: 10px;
+  padding: 13.5px;
+  border: 1px solid red;
+  width: 50px;
+  margin-left: 15px;
+
+  &:hover {
+    cursor: pointer;
+    background: red;
+    color: black;
+  }
 `;
