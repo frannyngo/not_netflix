@@ -17,16 +17,7 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  background: transparent;
-  width: 100%;
-  max-width: 300px;
-  border-radius: 10px;
-  height: 350px;
-  margin: 20px;
-  padding-top: 5px;
-  padding-top: 10px;
-  border: 1px solid red;
+  height: 200px;
 
   &:hover {
     animation: ${hover} 0.1s ease-in;
@@ -44,7 +35,7 @@ export const TextContainer = styled.div`
 `;
 
 export const Header = styled.p`
-  color: red;
+  color: white;
   font-size: 15px;
   margin: 0px;
   padding: 0px;
@@ -53,7 +44,7 @@ export const Header = styled.p`
 `;
 
 export const Poster = styled.img`
-  width: 95%;
-  height: 60%;
+  width: 250px;
+  height: 200px;
   border-radius: 10px;
 `;

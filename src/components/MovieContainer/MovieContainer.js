@@ -8,19 +8,19 @@ import {
 import { Button } from "../../global/theme";
 import Error from "../../assets/error.png";
 
-export default function MovieContainer(props) {
+export default function MovieContainer({ movie }) {
   return (
     <Container>
       <Poster
-        src={props.movie.Poster}
+        src={movie.Poster}
         onError={({ currentTarget }) => {
           currentTarget.onerror = null;
           currentTarget.src = Error;
         }}
       />
       <TextContainer>
-        <Header>{props.movie.Year}</Header>
-        <Header>{props.movie.Title}</Header>
+        <Header>{movie.Year}</Header>
+        <Header>{movie.Title}</Header>
         <Button>More Info</Button>
       </TextContainer>
     </Container>

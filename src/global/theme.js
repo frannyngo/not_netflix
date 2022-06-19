@@ -28,10 +28,10 @@ export const Button = styled.button`
   justify-content: center;
   align-items: center;
   background: black;
-  color: red;
+  color: white;
   border-radius: 10px;
   padding: 10px;
-  border: 1px solid red;
+  border: 1px solid;
   width: 100px;
   margin-top: 15px;
 

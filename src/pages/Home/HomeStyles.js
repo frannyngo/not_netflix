@@ -1,4 +1,30 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const hover = keyframes`
+  from {
+    transform: scale(1);
+    --webkit-transform: scale(1);
+    -ms-transform: scale(1);  
+  }
+  to {
+    transform: scale(1.1);
+    --webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+  }
+`;
+
+const hoverOver = keyframes`
+  from {
+    transform: scale(1.1);
+    --webkit-transform: scale(1);
+    -ms-transform: scale(1);  
+  }
+  to {
+    transform: scale(1);
+    --webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+  }
+`;
 
 export const SearchContainer = styled.form`
   display: flex;
@@ -6,6 +32,14 @@ export const SearchContainer = styled.form`
   justify-content: center;
   flex-direction: column;
   margin-right: 30px;
+`;
+
+export const SearchPlacerholder = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  width: 90%;
 `;
 
 export const Input = styled.input`
@@ -24,13 +58,23 @@ export const Input = styled.input`
 `;
 
 export const SearchLibrary = styled.div`
-  display: flex;
-  margin-top: 20px;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  width: 90%;
-  height: 100%;
+  display: grid;
+  grid-auto-flow: column;
+  overflow-x: scroll;
+  gap: 20px;
+  height: 240px;
+  width: 100%;
+  animation: ${hoverOver} 0.1s ease-in;
+  animation-fill-mode: forwards;
+
+  &:hover {
+    animation: ${hover} 0.1s ease-in;
+    animation-fill-mode: forwards;
+  }
+
+  @media (max-width: 450px) {
+    width: 90%;
+  }
 `;
 
 export const ButtonContainer = styled.div`

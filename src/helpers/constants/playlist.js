@@ -301,4 +301,61 @@ const FUTURE = [
   },
 ];
 
-export { TRENDING, POPULAR, COMEDY, FAMILIAR, FUTURE };
+const WATCH_AGAIN = [
+  {
+    Poster:
+      "https://m.media-amazon.com/images/M/MV5BMGVmMWNiMDktYjQ0Mi00MWIxLTk0N2UtN2ZlYTdkN2IzNDNlXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_SX300.jpg",
+    Title: "Harry Potter and the Deathly Hallows: Part 2",
+    Year: "2011",
+  },
+  {
+    Poster:
+      "https://m.media-amazon.com/images/M/MV5BMzkyZGFlOWQtZjFlMi00N2YwLWE2OWQtYTgxY2NkNmM1NjMwXkEyXkFqcGdeQXVyNjY1NTM1MzA@._V1_SX300.jpg",
+    Title: "Harry Potter and the Sorcerer's Stone",
+    Year: "2001",
+  },
+  {
+    Poster:
+      "https://m.media-amazon.com/images/M/MV5BMjE0YjUzNDUtMjc5OS00MTU3LTgxMmUtODhkOThkMzdjNWI4XkEyXkFqcGdeQXVyMTA3MzQ4MTc0._V1_SX300.jpg",
+    Title: "Harry Potter and the Chamber of Secrets",
+    Year: "2002",
+  },
+  {
+    Poster:
+      "https://m.media-amazon.com/images/M/MV5BMTY4NTIwODg0N15BMl5BanBnXkFtZTcwOTc0MjEzMw@@._V1_SX300.jpg",
+    Title: "Harry Potter and the Prisoner of Azkaban",
+    Year: "2004",
+  },
+  {
+    Poster:
+      "https://m.media-amazon.com/images/M/MV5BMTI1NDMyMjExOF5BMl5BanBnXkFtZTcwOTc4MjQzMQ@@._V1_SX300.jpg",
+    Title: "Harry Potter and the Goblet of Fire",
+    Year: "2005",
+  },
+  {
+    Poster:
+      "https://m.media-amazon.com/images/M/MV5BMTM0NTczMTUzOV5BMl5BanBnXkFtZTYwMzIxNTg3._V1_SX300.jpg",
+    Title: "Harry Potter and the Order of the Phoenix",
+    Year: "2007",
+  },
+  {
+    Poster:
+      "https://m.media-amazon.com/images/M/MV5BMTQ2OTE1Mjk0N15BMl5BanBnXkFtZTcwODE3MDAwNA@@._V1_SX300.jpg",
+    Title: "Harry Potter and the Deathly Hallows: Part 1",
+    Year: "2010",
+  },
+  {
+    Poster:
+      "https://m.media-amazon.com/images/M/MV5BNzU3NDg4NTAyNV5BMl5BanBnXkFtZTcwOTg2ODg1Mg@@._V1_SX300.jpg",
+    Title: "Harry Potter and the Half-Blood Prince",
+    Year: "2009",
+  },
+  {
+    Poster:
+      "https://m.media-amazon.com/images/M/MV5BMjE0ODEwNjM2NF5BMl5BanBnXkFtZTcwMjU2Mzg3NA@@._V1_SX300.jpg",
+    Title: "When Harry Met Sally...",
+    Year: "1989",
+  },
+];
+
+export { TRENDING, POPULAR, COMEDY, FAMILIAR, FUTURE, WATCH_AGAIN };
