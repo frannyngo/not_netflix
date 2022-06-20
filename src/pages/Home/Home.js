@@ -26,7 +26,6 @@ export default function Home() {
   const [message, setMessage] = useState("Welcome to Not Netflix.");
 
   async function handleChange(e) {
-    console.log(">>> ", e.target.value.length);
     try {
       if (e.target.value.length < 3 && e.target.value.length >= 1) {
         setMovie();
@@ -34,9 +33,8 @@ export default function Home() {
       } else if (e.target.value.length == 0) {
         setMessage("Welcome to Not Netflix.");
       } else {
-        console.log("searching...");
         const response = await search(e.target.value);
-        console.log(">>> ", response);
+        response.Error && setMessage(response.Error);
         typeof response === "number"
           ? setMessage("Network error, please try again later.") // ran out of API calls
           : setMovie(response.Search);
