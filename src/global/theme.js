@@ -19,7 +19,7 @@ export const Section = styled.section`
   padding-top: 200px;
   padding-bottom: 100px;
   background: ${(props) => props.background || "black"};
-  width: 100%;
+  width: 90%;
   max-width: 1600px;
 `;
 

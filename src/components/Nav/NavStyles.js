@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const NavContainer = styled.div`
   display: flex;
-  width: 100%;
+  width: 90%;
   height: 100px;
   max-width: 1600px;
   position: absolute;

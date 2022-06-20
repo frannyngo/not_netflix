@@ -22,7 +22,7 @@ import {
 
 export default function Home() {
   const ref = useRef();
-  const [movie, setMovie] = useState(TRENDING);
+  const [movie, setMovie] = useState();
   const [message, setMessage] = useState("Welcome to Not Netflix.");
 
   async function handleChange(e) {

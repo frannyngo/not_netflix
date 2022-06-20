@@ -18,7 +18,7 @@ export default function Playlist({ title, list }) {
       <MoviesContainer>
         {list.map((movie, i) => {
           return (
-            <Movie>
+            <Movie key={i}>
               <InfoContainer>
                 <Header>{movie.Year}</Header>
                 <Header>{movie.Title}</Header>
