@@ -5,13 +5,13 @@ const hover = keyframes`
     transform: scale(1);
     --webkit-transform: scale(1);
     -ms-transform: scale(1);  
-    opacity: 1;
+    opacity: 0;
   }
   to {
     transform: scale(1.1);
     --webkit-transform: scale(1.1);
     -ms-transform: scale(1.1);
-    opacity: 0;
+    opacity: 1;
   }
 `;
 
@@ -54,20 +54,15 @@ export const MoviesContainer = styled.div`
   grid-auto-flow: column;
   overflow-x: scroll;
   gap: 10px;
+  overflow-y: hidden;
 `;
 
 export const Poster = styled.img`
-  position: absolute;
   width: 250px;
   height: 200px;
   border-radius: 10px;
-  z-index: 1;
+  z-index: 0;
   top: 0;
-  &:hover {
-    animation: ${hover} 0.1s ease-in;
-    animation-fill-mode: forwards;
-    opacity: 0;
-  }
 `;
 
 export const InfoContainer = styled.div`
@@ -75,9 +70,16 @@ export const InfoContainer = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  position: absolute;
   height: 200px;
   width: 250px;
   z-index: 0;
+  background: black;
+  opacity: 0;
+  &:hover {
+    animation: ${hover} 0.1s ease-in;
+    animation-fill-mode: forwards;
+  }
 `;
 
 export const Movie = styled.div`

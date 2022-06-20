@@ -83,13 +83,11 @@ export default function Home() {
         <Playlist title={`Familiar Favourites`} list={FAMILIAR} />
         <Playlist title={`Dystopian Futures`} list={FUTURE} />
         <Playlist title={`Watch It Again`} list={WATCH_AGAIN} />
-
-        {/* /////// */}
-        <Playlist title={`Trending Now`} list={TRENDING} />
-        <Playlist title={`90-Minute Comedies`} list={COMEDY} />
-        <Playlist title={`Familiar Favourites`} list={FAMILIAR} />
-        <Playlist title={`Dystopian Futures`} list={FUTURE} />
-        <Playlist title={`Watch It Again`} list={WATCH_AGAIN} />
+        <Playlist title={`Awkward Comedy`} list={TRENDING} />
+        <Playlist title={`Comedy`} list={COMEDY} />
+        <Playlist title={`Because You Watched Twilight`} list={FAMILIAR} />
+        <Playlist title={`Suspensful Movies`} list={FUTURE} />
+        <Playlist title={`Thrillers`} list={WATCH_AGAIN} />
       </PlaylistContainer>
       -
     </Section>
